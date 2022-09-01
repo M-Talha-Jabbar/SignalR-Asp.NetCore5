@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,7 +30,7 @@ namespace Server
         {
             services.AddControllers();
 
-            services.AddSignalR();
+            services.AddSignalR(); // registering services required by SignalR hubs
 
             services.AddCors(options =>
             {
